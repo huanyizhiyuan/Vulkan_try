@@ -1,0 +1,10 @@
+^D:\VSCODE_CODE_HOME\VULKAN_WORKSPACE\BUILD\CMAKEFILES\1E3D44808B9346EBA3DC697C1149D2C7\GENERATE.STAMP.RULE
+setlocal
+D:\cmake\home\bin\cmake.exe -SD:/vscode_code_home/Vulkan_workspace -BD:/vscode_code_home/Vulkan_workspace/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/vscode_code_home/Vulkan_workspace/build/Vulkan_workspace.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

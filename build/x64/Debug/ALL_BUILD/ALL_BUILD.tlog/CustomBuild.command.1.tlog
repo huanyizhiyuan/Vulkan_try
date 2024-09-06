@@ -1,0 +1,10 @@
+^D:\VSCODE_CODE_HOME\VULKAN_WORKSPACE\CMAKELISTS.TXT
+setlocal
+D:\cmake\home\bin\cmake.exe -SD:/vscode_code_home/Vulkan_workspace -BD:/vscode_code_home/Vulkan_workspace/build --check-stamp-file D:/vscode_code_home/Vulkan_workspace/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
