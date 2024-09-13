@@ -1,52 +1,33 @@
-#include <vulkan/vulkan.h>
+#define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
+
+#define GLM_FORCE_DEPTH_ZERO_TO_ONE
+#include <glm/vec4.hpp>
+#include <glm/mat4x4.hpp>
+
 #include <iostream>
 
 int main() {
-    // 初始化 GLFW
-    if (!glfwInit()) {
-        std::cerr << "Failed to initialize GLFW" << std::endl;
-        return -1;
-    }
+    glfwInit();
 
-    // 使用 GLFW 创建窗口
-    glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);  // 不要创建 OpenGL 上下文
-    GLFWwindow* window = glfwCreateWindow(800, 600, "Vulkan Window", nullptr, nullptr);
-    if (!window) {
-        std::cerr << "Failed to create GLFW window" << std::endl;
-        glfwTerminate();
-        return -1;
-    }
+    glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+    GLFWwindow* window = glfwCreateWindow(800, 600, "Vulkan window", nullptr, nullptr);
 
-    // 初始化 Vulkan 实例
-    VkInstance instance;
-    VkApplicationInfo appInfo{};
-    appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
-    appInfo.pApplicationName = "Hello Vulkan";
-    appInfo.applicationVersion = VK_MAKE_VERSION(1, 0, 0);
-    appInfo.pEngineName = "No Engine";
-    appInfo.engineVersion = VK_MAKE_VERSION(1, 0, 0);
-    appInfo.apiVersion = VK_API_VERSION_1_0;
+    uint32_t extensionCount = 0;
+    vkEnumerateInstanceExtensionProperties(nullptr, &extensionCount, nullptr);
 
-    VkInstanceCreateInfo createInfo{};
-    createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
-    createInfo.pApplicationInfo = &appInfo;
+    std::cout << extensionCount << " extensions supported\n";
 
-    if (vkCreateInstance(&createInfo, nullptr, &instance) != VK_SUCCESS) {
-        std::cerr << "Failed to create Vulkan instance!" << std::endl;
-        return -1;
-    }
+    glm::mat4 matrix;
+    glm::vec4 vec;
+    auto test = matrix * vec;
 
-    std::cout << "Vulkan instance created successfully!" << std::endl;
-
-    // 主循环
-    while (!glfwWindowShouldClose(window)) {
+    while(!glfwWindowShouldClose(window)) {
         glfwPollEvents();
     }
 
-    // 清理 Vulkan 实例和 GLFW
-    vkDestroyInstance(instance, nullptr);
     glfwDestroyWindow(window);
+
     glfwTerminate();
 
     return 0;

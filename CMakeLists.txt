@@ -4,11 +4,11 @@ cmake_minimum_required(VERSION 3.10)
 project(Vulkan_workspace VERSION 1.0)
 
 # 指定 C++ 标准
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# 包含 vcpkg 的工具链文件（如果使用了 vcpkg）
-set(CMAKE_TOOLCHAIN_FILE "D:/vcpkg/vcpkg/scripts/buildsystems/vcpkg.cmake")
+# # 包含 vcpkg 的工具链文件（如果使用了 vcpkg）
+# set(CMAKE_TOOLCHAIN_FILE "D:/vcpkg/vcpkg/scripts/buildsystems/vcpkg.cmake")
 
 # 查找 Vulkan 和 GLFW 库
 find_package(Vulkan REQUIRED)

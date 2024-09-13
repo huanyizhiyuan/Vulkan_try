@@ -1,0 +1,3 @@
+D:\cmake\home\bin\cmake.exe -E rm -f CMakeFiles\Vulkan_workspace.dir/objects.a
+D:\C++\1301win32MinGW\mingw64\bin\ar.exe qc CMakeFiles\Vulkan_workspace.dir/objects.a @CMakeFiles\Vulkan_workspace.dir\objects1.rsp
+D:\C++\1301win32MinGW\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\Vulkan_workspace.dir/objects.a -Wl,--no-whole-archive -o Vulkan_workspace.exe -Wl,--out-implib,libVulkan_workspace.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Vulkan_workspace.dir\linkLibs.rsp
