@@ -1,1 +1,0 @@
- "D:/Vulkan/home/Lib/vulkan-1.lib" "D:/vcpkg/vcpkg/installed/x64-windows/debug/lib/glfw3dll.lib" "D:/vcpkg/vcpkg/installed/x64-windows/debug/lib/glm.lib" -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

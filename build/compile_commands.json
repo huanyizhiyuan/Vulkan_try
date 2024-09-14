@@ -1,8 +1,0 @@
-[
-{
-  "directory": "D:/vscode_code_home/Vulkan_workspace/build",
-  "command": "D:\\C++\\1301win32MinGW\\mingw64\\bin\\g++.exe -DGLFW_DLL @CMakeFiles/Vulkan_workspace.dir/includes_CXX.rsp -g -std=gnu++20 -o CMakeFiles\\Vulkan_workspace.dir\\src\\main.cpp.obj -c D:\\vscode_code_home\\Vulkan_workspace\\src\\main.cpp",
-  "file": "D:/vscode_code_home/Vulkan_workspace/src/main.cpp",
-  "output": "CMakeFiles/Vulkan_workspace.dir/src/main.cpp.obj"
-}
-]
