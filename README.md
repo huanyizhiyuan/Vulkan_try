@@ -1,17 +1,15 @@
-# Vulkan课程
+# Vulkan-02：学习第一个窗口程序。（GLFW库的实战）
 
-# 一、配置环境
-cmake + VsCode + vcpkg + Git
+学习写一个窗口程序，对cmake的理解进行加深，CmakeLists.txt如何进行更改，我们的.hpp， .cpp文件如何放置。
 
-# 二、主要的学习内容：
-1. Glfw库。
-2. glm库。
-3. Vulkan的知识内容。
+本节中我们将创建一个类，使用命名空间cre封装，这样我们后面的教程才有机会来绘制更多的内容。
 
-## 一些学习资料：
+项目肯定是要有一个主体的，项目中的很多内容都是新鲜的知识，比如说：
+1. const 与 constexpr 的区别。
+2. namespace 与 结构体，类的区别。
+3. #pragma once的使用。
+4. GLFW库的使用与尝试。
 
-研一基本功 Git + SSH
-https://www.bilibili.com/video/BV1Fw4m1C7Tq/?spm_id_from=333.337.search-card.all.click&vd_source=9c57d099465794330f3114dfbc1140f5
+运行效果和上一章差别不大，但却是我们自己看得懂的代码，而不是GPT为我们代写的。
 
-外国的一个Vulkan入门视频，难度是有的。
-https://www.bilibili.com/video/BV1Vu411R7cb/?p=2&spm_id_from=pageDriver&vd_source=9c57d099465794330f3114dfbc1140f5
+![alt text](./image/1.png)
